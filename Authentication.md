@@ -54,7 +54,9 @@ sequenceDiagram
     API_Gateway -->> User-Agent: Return Data
 ```
 
-# Logout scenario - Applications call this endpoint <code>/oauth2/logout</code> to log out the current user and end the user session.
+# Logout scenario
+Applications call this endpoint <code>/oauth2/logout</code> to log out the current user and end the user session.
+
 ```mermaid
 sequenceDiagram
     participant User-Agent
