@@ -16,14 +16,23 @@ sequenceDiagram
 
     UA->>AR: 1. Initiate Authorization Request
     AR-->>UA: 2. Redirect to Authorization Server
-    UA->>AR: 3. Provide Authorization Code
-    AR-->>UA: 4. Return Access Token
+    UA->>AR: 3. Request Token using Authorization Code
+    AR-->>UA: 4. Return Access Token and Refresh Token
 
-    UA->>AG: 5. Access Protected Resource
-    AG->>AG: 6. Validate Token
+    UA->>AG: 5. Access Protected Resource with New Access Token
+    AG->>AG: 6. Validate Access Token
     AG->>RS: 7. Forward Request
     RS-->>AG: 8. Return Data
     AG-->>UA: 9. Return Data
+
+
+    UA->>AR: 10. Request Refresh Token
+    UA->>AR: 11. Request New Access Token using Refresh Token
+    AR-->>UA: 12. Return New Access Token
+    AG->>AG: 13. Validate New Access Token
+    AG->>RS: 14. Forward Request
+    RS-->>AG: 15. Return Data
+    AG-->>UA: 16. Return Data
 ```
 
 # Logout scenario
