@@ -6,6 +6,12 @@ Applications call this endpoint <code>/oauth2/authorise</code> to request an aut
 ## Token Endpoint
 Applications call this endpoint <code>/oauth2/token</code> to request an OAuth token
 
+
+
+<details>
+
+<summary>Local Token Validation</summary>
+
 # Validate token locally in API Gateway
 ```mermaid
 sequenceDiagram
@@ -34,6 +40,8 @@ sequenceDiagram
     RS-->>AG: 15. Return Data
     AG-->>UA: 16. Return Data
 ```
+
+</details>
 
 # Logout scenario
 Applications call this endpoint <code>/oauth2/logout</code> to log out the current user and end the user session.
