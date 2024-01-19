@@ -3,55 +3,27 @@
 ## Authorization Endpoint
 Applications call this endpoint <code>/oauth2/authorise</code> to request an authorization code
 
-
-
 ## Token Endpoint
 Applications call this endpoint <code>/oauth2/token</code> to request an OAuth token
 
-
 # Validate token locally in API Gateway
 ```mermaid
 sequenceDiagram
-    participant User-Agent
-    participant Authorization_Server
-    participant API_Gateway
-    participant Resource_Server
+    participant UA as User-Agent
+    participant AR as Authorization Server(IDP)
+    participant AG as API Gateway
+    participant RS as Resource Server
 
-    User-Agent ->> Authorization_Server: Initiate Authorization Request
-    Authorization_Server -->> User-Agent: Redirect to Authorization Server
-    User-Agent ->> Authorization_Server: Provide Authorization Code
-    Authorization_Server -->> User-Agent: Return Access Token
-    User-Agent ->> API_Gateway: Access Protected Resource
-    API_Gateway ->> Authorization_Server: Validate Token
-    API_Gateway -->> Resource_Server: Forward Request
-    Resource_Server -->> API_Gateway: Return Data
-    API_Gateway -->> User-Agent: Return Data
+    UA->>AR: 1. Initiate Authorization Request
+    AR-->>UA: 2. Redirect to Authorization Server
+    UA->>AR: 3. Provide Authorization Code
+    AR-->>UA: 4. Return Access Token
 
-    User-Agent ->> API_Gateway: Initiate Logout Request
-    API_Gateway ->> Authorization_Server: Revoke Access Token
-    Authorization_Server -->> API_Gateway: Access Token Revoked
-    API_Gateway ->> Resource_Server: Revoke Session
-    Resource_Server -->> API_Gateway: Session Revoked
-    API_Gateway -->> User-Agent: Logout Successful
-```
-
-# Validate token locally in API Gateway
-```mermaid
-sequenceDiagram
-    participant User-Agent
-    participant Authorization_Server
-    participant API_Gateway
-    participant Resource_Server
-
-    User-Agent ->> Authorization_Server: Initiate Authorization Request
-    Authorization_Server -->> User-Agent: Redirect to Authorization Server
-    User-Agent ->> Authorization_Server: Provide Authorization Code
-    Authorization_Server -->> User-Agent: Return Access Token
-    User-Agent ->> API_Gateway: Access Protected Resource
-    API_Gateway ->> API_Gateway: Validate Token Locally
-    API_Gateway ->> Resource_Server: Forward Request
-    Resource_Server -->> API_Gateway: Return Data
-    API_Gateway -->> User-Agent: Return Data
+    UA->>AG: 5. Access Protected Resource
+    AG->>AG: 6. Validate Token
+    AG->>RS: 7. Forward Request
+    RS-->>AG: 8. Return Data
+    AG-->>UA: 9. Return Data
 ```
 
 # Logout scenario
@@ -59,15 +31,16 @@ Applications call this endpoint <code>/oauth2/logout</code> to log out the curre
 
 ```mermaid
 sequenceDiagram
-    participant User-Agent
-    participant Authorization_Server
-    participant API_Gateway
-    participant Resource_Server
+    participant UA as User-Agent
+    participant AR as Authorization Server
+    participant AG as API Gateway
+    participant RS as Resource Server
 
-    User-Agent ->> API_Gateway: Initiate Logout Request
-    API_Gateway ->> Authorization_Server: Revoke Access Token
-    Authorization_Server -->> API_Gateway: Access Token Revoked
-    API_Gateway ->> Resource_Server: Revoke Session
-    Resource_Server -->> API_Gateway: Session Revoked
-    API_Gateway -->> User-Agent: Logout Successful
+    UA->>AG: 1. Initiate Logout Request
+    AG->>AR: 2. Revoke Access Token
+    AR-->>AG: 3. Access Token Revoked
+    AG->>RS: 4. Revoke Session
+    RS-->>AG: 5. Session Revoked
+    AG-->>UA: 6. Logout Successful
+
 ```
