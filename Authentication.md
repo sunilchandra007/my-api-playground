@@ -1,12 +1,10 @@
 
 
-## Authorization Endpoint
-Applications call this endpoint <code>/oauth2/authorise</code> to request an authorization code
-
-## Token Endpoint
-Applications call this endpoint <code>/oauth2/token</code> to request an OAuth token
-
 # Validate token locally in API Gateway
+
+Applications calls Authorization Endpoint <code>/oauth2/authorise</code> to request an authorization code
+Applications calls Token Endpoint <code>/oauth2/token</code> to request an OAuth token
+
 ```mermaid
 sequenceDiagram
     participant UA as User-Agent
@@ -14,9 +12,9 @@ sequenceDiagram
     participant AG as API Gateway
     participant RS as Resource Server
 
-    UA->>AR: 1. Request Authorization Code to Authorization Endpoint <code>/oauth2/authorise</code>
+    UA->>AR: 1. Request Authorization Code to Authorization Endpoint /oauth2/authorise
     AR-->>UA: 2. Return Authorization Code
-    UA->>AR: 3. Request Token using Authorization Code to Token Endpoint <code>/oauth2/token</code>
+    UA->>AR: 3. Request Token using Authorization Code to Token Endpoint /oauth2/token
     AR-->>UA: 4. Return Access Token and Refresh Token
 
     UA->>AG: 5. Access Protected Resource with New Access Token
