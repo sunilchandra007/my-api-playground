@@ -14,9 +14,9 @@ sequenceDiagram
     participant AG as API Gateway
     participant RS as Resource Server
 
-    UA->>AR: 1. Initiate Authorization Request
-    AR-->>UA: 2. Redirect to Authorization Server
-    UA->>AR: 3. Request Token using Authorization Code
+    UA->>AR: 1. Request Authorization Code to Authorization Endpoint <code>/oauth2/authorise</code>
+    AR-->>UA: 2. Return Authorization Code
+    UA->>AR: 3. Request Token using Authorization Code to Token Endpoint <code>/oauth2/token</code>
     AR-->>UA: 4. Return Access Token and Refresh Token
 
     UA->>AG: 5. Access Protected Resource with New Access Token
