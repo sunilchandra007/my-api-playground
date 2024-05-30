@@ -1,11 +1,10 @@
 >>Authentication Policy
 
-Key Authentication
-Basic Authentication
-LDAP Authentication
-OAuth Authentication
-MTLS Authentication
-JWT 
+API Key Authentication
+OAuth/JWT Authentication
+Client Certificate/MTLS Authentication
+Caller IP Restriction
+Basic/LDAP Authentication
 
 
 >>Traffic Management
