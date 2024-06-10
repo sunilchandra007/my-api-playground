@@ -1,5 +1,7 @@
 # API-Security
-API Security
+Identity Management Platform
+API Management Platform
+Entitlement Management System - Open Policy Agent
 
 
 Token type
@@ -23,3 +25,5 @@ Authentication Policy
 Authorisation Policy
 - What can you do?
 - Access Token
+
+  
