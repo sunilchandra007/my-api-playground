@@ -6,11 +6,19 @@ Token type
 - Access
 - ID
 
+Claims
+- Audience
+- Issuer
+- Expiration
+- Subject
+
+Scope(Group of claims)
+
 
 Authentication Policy
 - Who you are?
-- ID Token
+- ID Token, Scope(OpenID)
   
 Authorisation Policy
 - What can you do?
-- Access Token, claims( Audience, Issuer, expiration, Subject), scope
+- Access Token, Claims( Audience, Issuer, expiration, Subject), Scope(Group of claims)
