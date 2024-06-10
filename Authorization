@@ -1,0 +1,5 @@
+Autorization in Layers
+
+1. Token Service - what scopes are services are allowed to be requested?
+2. API Gateway - coarse grained check of scopes, token validity etc
+3. Backend API - fine grained autorization of data released by API. Check claims, issuer, audience etc.
