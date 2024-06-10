@@ -3,3 +3,7 @@ Autorization in Layers
 1. Token Service - what scopes are services are allowed to be requested?
 2. API Gateway - coarse grained check of scopes, token validity etc
 3. Backend API - fine grained autorization of data(records, fields etc) released by API. Check claims, issuer, audience etc.
+
+
+Authorization via the Entitlement Management System - OPA
+- Called from PEP (policy Enforcement Point) - API Gateway or backend API 
