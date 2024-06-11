@@ -1,4 +1,4 @@
->>Authentication Policy
+**Authentication Policy
 
 API Key Authentication
 OAuth/JWT Authentication
@@ -7,7 +7,8 @@ Caller IP Restriction
 Basic/LDAP Authentication
 
 
->>Traffic Management
+**Traffic Management
+
 Rate Limiting
 Quota
 
