@@ -1,9 +1,11 @@
 # API-Security
 Identity Management Platform
 API Management Platform
+- Verify Claims
+- Validate token with issuer signing key - key(n,e), certificate if, openid config
 
 Entitlement Management System 
-- Open Policy Agent
+- Open Policy Agent - OPA Engine
 - Central place for autorization policy audit
 - Cleaner application code and easier to maintain
 
