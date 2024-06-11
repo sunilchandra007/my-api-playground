@@ -13,10 +13,12 @@ Token type
 - ID
 
 Claims
-- Audience
-- Issuer
-- Expiration
-- Subject
+- Subject sub
+- Issuer iss
+- Scope
+- Audience aud
+- Expiration exp
+
 
 Scope(Group of claims)
 
