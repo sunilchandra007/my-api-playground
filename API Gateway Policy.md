@@ -13,8 +13,8 @@ OAuth/JWT Validation
   
 ## Traffic Management
 
-Rate Limiting
-Quota
+- Rate Limiting
+- Quota
 
 
 
