@@ -7,7 +7,7 @@
 
 ## Authorisation Policy
 
-OAuth/JWT Authentication
+OAuth/JWT Validation
 - Validate token with issuer signing key - key(n,e), certificate if, openid config
 - Verify Claims
   
