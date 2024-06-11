@@ -1,11 +1,5 @@
 # API-Security
-Identity Management Platform
-
-Entitlement Management System 
-- Open Policy Agent - OPA Engine
-- Central place for autorization policy audit
-- Cleaner application code and easier to maintain
-
+Identity Provider - Identity Management Platform
 
 Token type
 - Access
