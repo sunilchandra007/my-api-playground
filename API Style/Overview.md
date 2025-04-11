@@ -20,7 +20,9 @@
 - **Cons**: Requires more setup, less human-readable compared to REST.
 - **Use Cases**: Suitable for real-time communication and microservices architecture.
 
-## WebSocket
+## WebSocket 
+
+https://en.wikipedia.org/wiki/WebSocket
 
 It enables full duplex communication between a server and a client over a long-running TCP connection.
 
