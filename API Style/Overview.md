@@ -28,9 +28,31 @@ It eliminates the needs for polling as required in HTTP, avoids some of the over
 
 - **Pros**: Enables real-time, bidirectional communication, low latency. 
 - **Cons**: More complex to implement, not suitable for all use cases.
-- **Use Cases**: Ideal for applications requiring more interactive and live/real-time updates or continuous streams of data, such as chats, dashboard, finance stock info update, GPS, online education, live streaming and online gaming apps. 
+- **Use Cases**: Ideal for applications requiring more interactive and live/real-time updates or continuous streams of data, such as chats, dashboard, finance stock info update, GPS, online education, live streaming and online gaming apps, IOT applications. 
 
 ## Webhooks
 - **Pros**: Simple to implement, allows event-driven communication.
 - **Cons**: Limited control over the timing of data delivery, requires endpoint management.
 - **Use Cases**: Useful for notifications and real-time updates.
+
+## Server-Sent Events (SSE)
+- **Pros**: Simple to implement, supports automatic reconnection.
+- **Cons**: Mono-directional (server to client), limited to text data.
+- **Use Cases**: Ideal for applications needing real-time updates from server to client.
+  
+# Non-HTTP protocols
+
+## MQTT (Message Queuing Telemetry Transport)
+- **Pros**: Lightweight, efficient, designed for unreliable networks, supports many-to-many communication.
+- **Cons**: Requires a broker, not suitable for high-frequency data.
+- **Use Cases**: Ideal for IoT devices with intermittent connectivity, such as remote sensors.
+
+
+## AMQP (Advanced Message Queuing Protocol)
+- **Pros**: Reliable, supports complex routing, secure.
+- **Cons**: More complex, higher overhead.
+- **Use Cases**: Suitable for applications requiring reliable message delivery and complex routing.
+
+
+
+
