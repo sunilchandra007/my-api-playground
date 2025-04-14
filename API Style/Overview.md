@@ -18,7 +18,7 @@
 ## gRPC (Google Remote Procedure Call)
 - **Pros**: High performance, supports multiple languages, uses HTTP/2 for efficient communication.
 - **Cons**: Requires more setup, less human-readable compared to REST.
-- **Use Cases**: Suitable for real-time communication and microservices architecture.
+- **Use Cases**: Suitable for real-time communication and microservices architecture, a popular choice for internal services because it allows them to efficiently stream data to one another using structured data payloads.
 
 ## WebSocket 
 
