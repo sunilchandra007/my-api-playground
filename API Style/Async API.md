@@ -14,7 +14,7 @@
 - **WebSockets**
 - **Server-Sent Events(SSE)**
 - **gRPC**
-- **Message Queuing Protocols**: MQTT, AMQP, RabbitMQ, Kafka
+- **Message Queuing Protocols**: [MQTT](https://www.hivemq.com/mqtt), AMQP, RabbitMQ, Kafka
 
 ## **Synchronous APIs**
 
