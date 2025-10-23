@@ -3,9 +3,8 @@
 JWE - Encrypted token
 JWS - Signed token
 
-> Bearer tokens are like cash, no one asks if you are the owner of the token
 
-JWT as Access token
+**JWT as Access token**
 - Should not have sensitive data in token
 - Meant for resource server
 - Which algorithm alg to use for Signing or encryption?
@@ -21,3 +20,11 @@ JWT as Access token
    - *nbf* - not before
    - *iat* - issued at
   
+## Bearer token
+> Bearer tokens are like cash, no one asks if you are the owner of the token
+
+## PoP (Proof of Possession)
+Proof of Possession adds an extra layer of security by requiring the client to prove it owns a cryptographic key associated with the token. Instead of just presenting the token (like a bearer token), the client signs requests with a private key.
+
+## spiffe
+https://spiffe.io/
