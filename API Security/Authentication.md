@@ -57,4 +57,6 @@ OpenID Connect is an identity layer built on top of the OAuth 2.0 protocol. It a
   - Redirected to Google’s login page.
   - After successful login, redirected back with an **ID token**.
   - Application verifies the token and logs the user in.
-  
+
+### 3. **[Mutual TLS | Client Authentication](https://www.rfc-editor.org/rfc/rfc8705.html)**
+### 3. **[Demonstrating Proof of Possession (DPoP)](https://www.rfc-editor.org/rfc/rfc9449.html)**
