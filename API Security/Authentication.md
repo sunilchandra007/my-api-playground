@@ -35,7 +35,7 @@
 OpenID Connect is an identity layer built on top of the OAuth 2.0 protocol. It allows clients to verify the identity of users based on authentication performed by an authorization server.
 
 - **How it works:**
-  - The user is redirected to an identity provider (IdP) for authentication.
+  - The user is redirected to an Autorization Server (identity provider - IdP) for authentication.
   - Upon successful login, the IdP returns an **ID token** and optionally an access token.
   - The client uses the ID token to verify the user's identity.
 
