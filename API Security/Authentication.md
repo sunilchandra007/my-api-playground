@@ -9,7 +9,7 @@
 
 ### 1. **[Basic Authentication](https://www.rfc-editor.org/rfc/rfc7617.html)**
 
-Basic Authentication is a simple authentication scheme built into the HTTP protocol. It involves sending a username and password with each request.
+[Basic Authentication](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Authentication) is a simple authentication scheme built into the HTTP protocol. It involves sending a username and password with each request.
 
 - **How it works:**
   - The client sends HTTP requests with an `Authorization` header containing a base64-encoded string of the format `username:password`.
