@@ -30,7 +30,7 @@
   Host: example.com
   Authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQ=
 
-### 2. **[OpenID Connect (OIDC)](https://openid.net/developers/how-connect-works/)**
+### 2. **[OpenID Connect (OIDC)](https://openid.net/developers/how-connect-works/) | Delegated Authorisation**
 
 OpenID Connect is an identity layer built on top of the OAuth 2.0 protocol. It allows clients to verify the identity of users based on authentication performed by an authorization server.
 
