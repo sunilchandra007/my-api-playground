@@ -61,6 +61,7 @@ OpenID Connect is an identity layer built on top of the OAuth 2.0 protocol. It a
 - **Reference:**
   - [🔥 Video - OAuth 2.0 and OpenID Connect (in plain English)](https://www.youtube.com/watch?v=996OiexHze0)
   - [Singpass developer](https://docs.developer.singpass.gov.sg/docs)
+  - [OIDC Debugger Playground](https://oidcdebugger.com/)
 
 ### 3. **[Mutual TLS | Client Authentication](https://www.rfc-editor.org/rfc/rfc8705.html)**
 ### 4. **[Demonstrating Proof of Possession (DPoP)](https://www.rfc-editor.org/rfc/rfc9449.html)**
