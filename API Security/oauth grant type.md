@@ -6,13 +6,14 @@
 ## 👤 Authorization Code Flow with PKCE (for user-facing apps)
 
 This is the **recommended flow for SPAs and mobile apps** and now even for confidential clients such as web apps in OAuth 2.1 draft.
-
+Front Channel - Browser doing HTTP request
+Back Channel - Backend Server doing HTTP POST request
 ### 🔄 How It Works:
 1. App redirects user to the authorization server with:
    - `response_type=code`
    - A **code challenge** (from PKCE)
 2. User logs in and consents.
-3. Server redirects back with an **authorization code**.
+3. Authorisation Server redirects back to Redirect URI/ Callback with an **authorization code**.
 4. App sends the code + **code verifier** (dynamically generated secret) to the token endpoint.
 5. Server verifies the code challenge and returns an **access token** (and optionally a refresh token).
 
