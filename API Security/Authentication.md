@@ -7,7 +7,7 @@
 
 ## Types of Authentication
 
-### 1. **Basic Authentication**
+### 1. **[Basic Authentication](https://www.rfc-editor.org/rfc/rfc7617.html)**
 
 Basic Authentication is a simple authentication scheme built into the HTTP protocol. It involves sending a username and password with each request.
 
