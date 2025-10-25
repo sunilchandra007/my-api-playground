@@ -22,10 +22,11 @@ This is the **recommended flow for SPAs and mobile apps** and now even for confi
 - Supports refresh tokens.
 - Secure for public clients (no client secret needed).
 
-### 📄 Defined in:
+### Reference:
 - [RFC 6749 – OAuth 2.0](https://www.rfc-editor.org/rfc/rfc6749)
 - [📄 RFC 7636 – Proof Key for Code Exchange (PKCE)](https://www.rfc-editor.org/rfc/rfc7636)
-``
+- [OAuth Debugger Playground](https://oauthdebugger.com/)
+
 
 ---
 
