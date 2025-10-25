@@ -6,8 +6,8 @@
 ## 👤 Authorization Code Flow with PKCE (for user-facing apps)
 
 This is the **recommended flow for SPAs and mobile apps** and now even for confidential clients such as web apps in OAuth 2.1 draft.
-- > Front Channel - Browser doing HTTP request via address bar)
-- > Back Channel - Backend Server doing HTTP calls to another server)
+- > Front Channel - Browser doing HTTP request via address bar
+- > Back Channel - Backend Server doing HTTP calls to another server
 
 ### 🔄 How It Works:
 1. App redirects user to the authorization server with:
