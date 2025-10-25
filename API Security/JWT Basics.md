@@ -1,4 +1,4 @@
-## JSON Web Token
+## [JSON Web Token](https://www.rfc-editor.org/rfc/rfc7523.html)
 
 JWE - Encrypted token
 JWS - Signed token
