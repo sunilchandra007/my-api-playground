@@ -52,9 +52,9 @@ OpenID Connect is an identity layer built on top of the OAuth 2.0 protocol. It a
   - Requires proper handling of tokens and secure storage.
 
 
-- **Example Flow:**
-  - User clicks "Login with Google".
-  - Redirected to Google’s login page.
+- **Example Flow:** https://docs.developer.singpass.gov.sg/docs
+  - User clicks "Login with Google/SingPass".
+  - Redirected to Google/SingPass login page.
   - After successful login, redirected back with an **ID token**.
   - Application verifies the token and logs the user in.
 
