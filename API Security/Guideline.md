@@ -34,7 +34,7 @@ This flow is designed for **devices without browsers or keyboards**, such as sma
 - Secure and user-friendly.
 
 ### 📄 Defined in:
-- [RFC 8628 – OAuth 2.0 Device Authorization Grant](https://www.rfc-editor.org/rfc/rfc7636)
+- [RFC 8628 – OAuth 2.0 Device Authorization Grant](https://www.rfc-editor.org/rfc/rfc8628)
 
 ---
 
@@ -58,6 +58,6 @@ This is the **recommended flow for web apps, mobile apps, and SPAs**.
 - Secure for public clients (no client secret needed).
 
 ### 📄 Defined in:
-- [RFC 6749 – OAuth 2.0](https://www.rfc-editor.org/rfc/rfc7636)
+- [RFC 6749 – OAuth 2.0](https://www.rfc-editor.org/rfc/rfc6749)
 - [RFC 7636 – PKCE](https://www.rfc-editor.org/rfc/rfc7636)
 ``
