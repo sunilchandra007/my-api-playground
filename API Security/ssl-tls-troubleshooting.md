@@ -1,3 +1,13 @@
+```
+wget https://google.com
+==========
+Connecting to google.com (172.217.194.138:443)
+tls_post_process_server_certificate:certificate verify 
+ssl_client: SSL_connect
+wget: error getting response: Connection reset by peer
+==========
+```
+
 ```bash
 # Inspect certificate details
 # -v (verbose) and -k (ignore cert errors)
