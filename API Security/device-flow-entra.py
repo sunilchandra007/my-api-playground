@@ -4,8 +4,8 @@ import json
 import webbrowser
 
 # Entra Configuration
-TENANT_ID = "3596192b-fdf5-4e2c-a6fa-acb706c963d8"
-CLIENT_ID = "7529f416-6b98-41ed-a422-810985411305"
+TENANT_ID = "fill"
+CLIENT_ID = "fill"
 AUTHORITY = f"https://login.microsoftonline.com/{TENANT_ID}"
 
 app = msal.PublicClientApplication(CLIENT_ID, authority=AUTHORITY)
