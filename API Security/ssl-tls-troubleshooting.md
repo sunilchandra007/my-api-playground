@@ -65,3 +65,17 @@ podman cp my-pg-root-ca.pem <container>:/usr/local/share/ca-certificates/my-ca.c
 # Update the trust store inside the container:
 podman exec <container> update-ca-certificates
 ```
+## podman with self-signed cert
+https://podman-desktop.io/docs/podman/adding-certificates-to-a-podman-machine
+
+```bash
+podman machine ssh
+cd /etc/pki/ca-trust/source/anchors
+touch my-pg-root-ca.pem 
+vi my-pg-root-ca.pem
+update-ca-trust
+exit
+# restart the machine
+podman machine stop
+podman machine start
+```
