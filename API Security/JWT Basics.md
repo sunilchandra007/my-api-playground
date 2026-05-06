@@ -1,21 +1,19 @@
 ## [JSON Web Token](https://www.rfc-editor.org/rfc/rfc7523.html)
 
-JWE - Encrypted token
-JWS - Signed token
+- JWS - Signed token ( header + payload + signature ) - Widely used
+- JWE - Encrypted token ( 5 dots) - very limited
 
-
-**JWT as Access token**
+**JWT/JWS as Access token**
 - Should not have sensitive data in token
 - Meant for resource server
 - Which algorithm alg to use for Signing or encryption?
-  - Should whitelist secure algo only such as asymmetric(EC256) or symmetric(HS256|RS256)
-  - *alg* as none means resource server would not validate the signature, so it is not recommended
+  - Should whitelist secure algo only such as asymmetric(RS256|EC256) or symmetric(HS256)
 - When to validate the token? ALWAYS, validate the signature
 - Who provides the token? Authorization Server
-- Always validate *issuer* and *audience* claim in the token
+- Always validate *issuer*, *audience* and *subject* claim in the token
 - For Open ID Connect, the value of issuer must be HTTPS URL
 - Check for presence of *scope* claim in access token - ID tokens don't have it
-- Tokens should have short expiration values - minutes or hours
+- Tokens should have short expiration values - usually =< 60 minutes
    - *exp* - expiration
    - *nbf* - not before
    - *iat* - issued at
