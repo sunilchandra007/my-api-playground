@@ -1,3 +1,18 @@
+# Application type 
+
+## Public applications
+- cannot hold credentials securely.
+- example
+  - native desktop application, mobile application that uses *Authorization Code* Flow with *PKCE*
+  - JavaScript-based client-side web application (such as a single-page app)
+
+## Confidential applications 
+- can hold credentials in a secure way without exposing them to unauthorized parties.
+- require a trusted backend server to store the secret(s).
+- example
+  - web application with a secure backend that uses the *Authorization Code* Flow
+  - machine-to-machine (M2M) application that uses the *Client Credentials* Flow ( client id + client secret)
+
 # Authentication vs Authorisation
 
 Authorization Server (Identity Platform - IdP)
