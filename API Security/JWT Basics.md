@@ -13,7 +13,7 @@
 {
   "alg": "RS256",
   "typ": "JWT",
-  "kid": "NMlOFrBDXaBtYLAYiNRmn"
+  "kid": "NMlOFrBDXaBtYLAYiNRmn" - can be checked in jwks_uri in https://Issuer/.well-known/jwks.json
 }
 ```
 **Signed JWT as Access token**
@@ -23,11 +23,11 @@
   - Should whitelist secure algo only such as asymmetric(RS256|ES256)
   - Enterprise APIs SHOULD default to RS256.
 - When to validate the token? ALWAYS, validate the signature
-- Who issues the token? Authorization Server
+- Who issues the token? Issuer - Authorization Server
 - Always validate claims in the token
   - *iss* - Issuer - who issued and signed this token
   - *aud* - Audience - recipient(s) that the token is intended for
-- For Open ID Connect, the value of issuer must be HTTPS URL ( can be checked in https://<issuer>/.well-known/openid-configuration)
+- For Open ID Connect, the value of issuer must be HTTPS URL ( can be checked in https://Issuer/.well-known/openid-configuration)
 - Check for presence of *scope* claim in access token - ID tokens don't have it
 - Tokens should have short lifetime with expiry usually less than  60 minutes
    - *exp* - expiry, *nbf* - not before, *iat* - issued at
