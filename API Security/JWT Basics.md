@@ -27,7 +27,7 @@
 - Always validate claims in the token
   - *iss* - Issuer - who issued and signed this token
   - *aud* - Audience - recipient(s) that the token is intended for
-- For Open ID Connect, the value of issuer must be HTTPS URL
+- For Open ID Connect, the value of issuer must be HTTPS URL ( can be checked in https://<issuer>/.well-known/openid-configuration)
 - Check for presence of *scope* claim in access token - ID tokens don't have it
 - Tokens should have short lifetime with expiry usually less than  60 minutes
    - *exp* - expiry, *nbf* - not before, *iat* - issued at
