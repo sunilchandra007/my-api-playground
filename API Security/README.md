@@ -1,17 +1,32 @@
-# Application type 
+## Application Types
 
-## Public applications
-- cannot hold credentials securely.
-- example
-  - native desktop application, mobile application that uses *Authorization Code* Flow with *PKCE*
-  - JavaScript-based client-side web application (such as a single-page app)
+### Public Applications
+Public applications **cannot securely store long‑term credentials (such as client secrets)** because the runtime environment is controlled by the end user or is otherwise untrusted.
 
-## Confidential applications 
-- can hold credentials in a secure way without exposing them to unauthorized parties.
-- require a trusted backend server to store the secret(s).
-- example
-  - web application with a secure backend that uses the *Authorization Code* Flow
-  - machine-to-machine (M2M) application that uses the *Client Credentials* Flow ( client id + client secret)
+As a result, **any embedded secret would be exposed**.
+
+**Examples:**
+- Native desktop applications
+- Mobile applications using **Authorization Code Flow with PKCE**
+- JavaScript‑based client‑side web applications (Single‑Page Applications)
+
+**Characteristics:**
+- No client secret
+- Authenticates the *user*, not the application itself
+
+---
+
+### Confidential Applications
+Confidential applications **can securely store credentials** without exposing them to unauthorized parties, because they run in a trusted environment (for example, a backend server).
+
+They **require a trusted backend** to protect secrets or private keys.
+
+**Examples:**
+- Web applications with a secure backend using **Authorization Code Flow with PKCE**
+- Machine‑to‑Machine (M2M) applications using
+  - Client Credentials Flow (Client ID + client secret)
+  - Private key JWT (strongly recommended for high‑security scenarios)
+  - mTLS (advanced/regulated environments including B2B scenarios)
 
 # Authentication vs Authorisation
 
