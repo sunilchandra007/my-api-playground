@@ -1,8 +1,34 @@
 # Authentication
 
-> **Who are you ? Show me your identity. Prove it!**
+> **Who are you? Show me your identity. Prove it.**
 
-> Authentication is the process of verifying the identity of a user or system. It ensures that the entity requesting access is who they **claim** to be.
+Authentication is the process of verifying the identity of a user or system.  
+It ensures that the entity requesting access is who they **claim** to be.
+
+---
+
+## 🔹 Layer 1: Authentication Method  
+**How does the user prove who they are?**
+
+Examples:
+- Password  
+- Passkey (WebAuthn / FIDO2)  
+- One‑Time Password (OTP)  
+- Biometric (fingerprint, face, iris)  
+- Smart card  
+
+👉 *This layer performs **credential verification***.
+
+---
+
+## 🔹 Layer 2: Authentication Protocol  
+**How is the authentication result communicated to an application?**
+
+Examples:
+- OpenID Connect (OIDC)  
+- SAML 2.0  
+
+👉 *This layer performs **identity assertion***.
 
 
 ## Types of Authentication
