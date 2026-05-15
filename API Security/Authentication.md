@@ -39,7 +39,9 @@ It ensures that the entity requesting access is who they **claim** to be.
 > 👤 User‑facing (interactive)
 - OpenID Connect (OIDC) - Wraps user authentication
 - SAML 2.0  - Browser‑based SSO
-
+>> 🤖 System‑to‑system (non‑interactive)
+- Workload Identity Federation - External IdP asserts workload identity via trusted issuer
+  
 👉 *This layer performs **identity assertion***.
 
 ## 🔹 Layer 3: Authorization & Token Mechanics (What can you do?)  
