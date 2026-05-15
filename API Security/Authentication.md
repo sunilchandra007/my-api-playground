@@ -12,32 +12,54 @@ It ensures that the entity requesting access is who they **claim** to be.
 - 👉 Authenticate applications / workloads, not people
 ---
 
-## 🔹 Layer 1: Authentication Method  
+## 🔹 Layer 1: Authentication (Who are you?) 
 **How does the user prove who they are?**
 
-Examples:
+> Proving identity using credentials
+
+✅ Authentication methods
 > 👤 User‑facing (interactive)
 - Password  
 - Passkey (WebAuthn / FIDO2)  
 - One‑Time Password (OTP)  
-- Biometric (fingerprint, face, iris)  
+- Biometrics (fingerprint, face, iris)  
 - Smart card  
 > 🤖 System‑to‑system (non‑interactive)
+- Basic Authentication
 - mTLS (Client Authentication) - Strong M2M authentication
 👉 *This layer performs **credential verification***.
 
 ---
 
-## 🔹 Layer 2: Authentication Protocol  
+## 🔹 Layer 2: Identity Assertion / Federation  
 **How is the authentication result communicated to an application?**
+> Communicating identity across trust boundaries
 
-Examples:
+✅ Authentication protocols
 > 👤 User‑facing (interactive)
 - OpenID Connect (OIDC) - Wraps user authentication
 - SAML 2.0  - Browser‑based SSO
 
 👉 *This layer performs **identity assertion***.
 
+## 🔹 Layer 3: Authorization & Token Mechanics (What can you do?)  
+**How is the authentication result communicated to an application?**
+> Governing access after identity is established
+
+
+❌ NOT authentication
+✅ OAuth / token‑level mechanisms
+
+- OAuth scopes / audiences
+- Private‑Key JWT → client authenticates to Authorization Server
+- DPoP → binds access token to client key
+- mTLS token binding (OAuth mTLS) → different from mTLS auth
+
+✅ Key property:
+
+- Operates on tokens
+- Assumes authentication already happened
+- Concerns authorization and token abuse prevention
 ---
 ## 🔹 Additional Authentication & Security Mechanisms
 
@@ -154,7 +176,7 @@ OpenID Connect is an identity layer built on top of the OAuth 2.0 protocol. It a
 
 - **Example Flow:** 
   - User clicks "Login with Google/SingPass".
-  - Redirected to Google/SingPass login page.
+  - Redirected to Google/SingPass login page [OIDC Federation].
   - After successful login, redirected back with an **ID token**.
   - Application verifies the token and logs the user in.
  
