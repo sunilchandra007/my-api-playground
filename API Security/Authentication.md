@@ -55,28 +55,23 @@ It ensures that the entity requesting access is who they **claim** to be.
 - DPoP → binds access token to client key
 - mTLS token binding (OAuth mTLS) → different from mTLS auth
 
+
+ Mechanism | User‑Facing | System‑to‑System | Purpose |
+|---|---|---|---|
+| **OAuth Scopes / Audience** | ✅ Yes | ✅ Yes | Define permitted access |
+| **Authorization Code + PKCE** | ✅ Yes | ❌ No | Prevent code interception for public clients |
+| **Private‑Key JWT** | ❌ No | ✅ Yes | Client authentication to Authorization Server |
+| **DPoP** | ❌ No | ✅ Yes | Bind access token to client key |
+| **OAuth mTLS (Token Binding)** | ❌ No | ✅ Yes | Sender‑constrained tokens |
+
+> DPoP = bind token to client
+> PKCE = bind authorization code to client
 ✅ Key property:
 
 - Operates on tokens
 - Assumes authentication already happened
 - Concerns authorization and token abuse prevention
----
-## 🔹 Additional Authentication & Security Mechanisms
-
-### ✅ Basic Authentication
-- **Category:** Authentication method  
-- **Description:** Username and password sent with each request  
-- **Purpose:** Proves knowledge of a secret  
-- **Notes:** Simple, non‑federated, discouraged for modern APIs
-
----
-
-### ✅ Mutual TLS (mTLS / Client Authentication)
-- **Category:** Authentication method  
-- **Description:** Client proves possession of a private key using a TLS certificate  
-- **Purpose:** Strong cryptographic authentication (commonly M2M)  
-- **Notes:** Identity derived from client certificate
-
+  
 ---
 ## 🔹 Additional Authentication Mechanisms
 
@@ -117,7 +112,6 @@ Cryptographic proof of possession = strong authentication.
 - Authentication occurs at transport layer (TLS)
 
 ---
----
 
 ### ⚠️ Demonstrating Proof of Possession (DPoP)
 - **Category:** Token security mechanism (OAuth extension)  
@@ -146,11 +140,6 @@ Cryptographic proof of possession = strong authentication.
   - No session management; credentials must be stored and sent repeatedly.
   - Not suitable for modern applications requiring more secure and flexible authentication.
 
-- **Example:**
-  ```http
-  GET /protected/resource HTTP/1.1
-  Host: example.com
-  Authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQ=
 
 ### 2. **[OpenID Connect (OIDC)](https://openid.net/developers/how-connect-works/) | Delegated Authorisation**
 
