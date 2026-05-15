@@ -2,7 +2,7 @@
 
 > **Who are you? Show me your identity. Prove it.**
 
-Authentication is the process of verifying the identity of a user or system.  
+ Authentication is the process of verifying the identity of a user or system.  
 It ensures that the entity requesting access is who they **claim** to be.
 
 > 👤 User‑facing (interactive)
