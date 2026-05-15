@@ -5,10 +5,10 @@
 Authentication is the process of verifying the identity of a user or system.  
 It ensures that the entity requesting access is who they **claim** to be.
 
->> 👤 User‑facing (interactive)
+> 👤 User‑facing (interactive)
 - 👉 Require human interaction and establish user identity
 
->> 🤖 System‑to‑system (non‑interactive)
+> 🤖 System‑to‑system (non‑interactive)
 - 👉 Authenticate applications / workloads, not people
 ---
 
