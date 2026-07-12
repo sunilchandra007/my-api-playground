@@ -1,5 +1,5 @@
 To be explored
 
-- https://create-api.dev/
+- https://api.dev
 - https://apiguide.dev
 
