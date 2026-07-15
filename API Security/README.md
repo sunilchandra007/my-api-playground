@@ -56,6 +56,7 @@ Claims
 - https://openid.net/guest-blog-financial-grade-api-fapi-explained-by-an-implementer-updated/
 - https://auth0.com/blog/fapi-2-0-the-future-of-api-security-for-high-stakes-customer-interactions/
 - https://aiden.ziegelaar.io/the-developers-guide-to-financial-grade-apis-fapi
+- https://www.sauble.ai/articles/oauth2-oidc-primer.html
 
 ## API Security and Governance Standards
 - [Singapore Gov - API Standards](https://docs.developer.tech.gov.sg/docs/api-governance-model)
