@@ -30,7 +30,11 @@ It eliminates the needs for polling as required in HTTP, avoids some of the over
 
 - **Pros**: Enables real-time, bidirectional communication, low latency. 
 - **Cons**: More complex to implement, not suitable for all use cases.
-- **Use Cases**: Ideal for applications requiring more interactive and live/real-time updates or continuous streams of data, such as chats, dashboard, finance stock info update, GPS, online education, live streaming and online gaming apps, IOT applications. 
+- **Use Cases**: Ideal for applications requiring more interactive and live/real-time updates or continuous streams of data, such as chats, dashboard, finance stock info update, GPS, online education, live streaming and online gaming apps, IOT applications.
+
+Reference
+- https://github.com/Azure-Samples/realtime-api-workshop/blob/main/presentation-material/00-websocket-basics/README.md
+- https://azure.github.io/azure-webpubsub/
 
 ## Webhooks
 - **Pros**: Simple to implement, allows event-driven communication.
