@@ -11,7 +11,7 @@ openssl req -new \
 -out client.csr \
 -subj "/CN=postman-client"
 
-# 3. Share CSR with CA for signing or Generate a self-signed certificate
+# 3. Generate a self-signed certificate
 openssl x509 \
   -req \
   -days 365 \
@@ -23,4 +23,9 @@ openssl x509 \
 client.key   <-- private key
 client.crt   <-- certificate
 
+#self-signed
+Subject DN: CN=postman-client
+Issuer DN: CN=postman-client
+
 ```
+Alternate to #3 is to share CSR with CA for signing
