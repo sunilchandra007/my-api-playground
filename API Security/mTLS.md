@@ -29,3 +29,5 @@ Issuer DN: CN=postman-client
 
 ```
 Alternate to #3 is to share CSR with CA for signing
+
+Extended Key Usage - TLS Web Client Authentication (ClientAuth)
